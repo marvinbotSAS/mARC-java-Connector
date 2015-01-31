@@ -1169,6 +1169,10 @@ a maximum of 100 session descriptors can be accessed at each method call
        
        localParams.clear();
        push("SESSION.Clear");
+       if ( options !=null && !options.isEmpty())
+       {
+           push(options);
+       }
        addFunction();
        if ( directExecute )     doIt();
 
